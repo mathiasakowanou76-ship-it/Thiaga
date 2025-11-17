@@ -45,7 +45,7 @@ function CandidateRow({ candidate, rank, maxVotes }: CandidateRowProps) {
           <span className="text-lg md:text-xl font-bold text-white">{rank}</span>
         </div>
 
-        <div className="flex-grow min-w-0">
+        <div className="w-32 md:w-48">
           <div className="flex items-center justify-between gap-2 mb-2">
             <span className="text-white font-medium text-sm md:text-base break-words flex-1">{candidate.name}</span>
             <span className="text-white font-bold text-sm md:text-lg flex-shrink-0">{candidate.votes}</span>
