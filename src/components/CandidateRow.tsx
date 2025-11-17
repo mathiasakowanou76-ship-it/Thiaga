@@ -13,25 +13,25 @@ function CandidateRow({ candidate, rank, maxVotes }: CandidateRowProps) {
   const getRankBadge = () => {
     if (rank === 1) {
       return (
-        <div className="flex flex-col md:flex-row items-center md:gap-2 text-yellow-400 font-bold text-center md:text-left">
-          <Trophy className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" />
-          <span className="text-xs md:text-sm whitespace-nowrap">Or</span>
+        <div className="flex items-center gap-1 text-yellow-400 font-bold whitespace-nowrap pointer-events-none">
+          <Trophy className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" />
+          <span className="text-xs md:text-sm">Or</span>
         </div>
       );
     }
     if (rank === 2) {
       return (
-        <div className="flex flex-col md:flex-row items-center md:gap-2 text-cyan-400 font-bold text-center md:text-left">
-          <Diamond className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" />
-          <span className="text-xs md:text-sm whitespace-nowrap">Diamant</span>
+        <div className="flex items-center gap-1 text-cyan-400 font-bold whitespace-nowrap pointer-events-none">
+          <Diamond className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" />
+          <span className="text-xs md:text-sm">Diamant</span>
         </div>
       );
     }
     if (rank === 3) {
       return (
-        <div className="flex flex-col md:flex-row items-center md:gap-2 text-orange-600 font-bold text-center md:text-left">
-          <Award className="w-5 h-5 md:w-6 md:h-6" fill="currentColor" />
-          <span className="text-xs md:text-sm whitespace-nowrap">Bronze</span>
+        <div className="flex items-center gap-1 text-orange-600 font-bold whitespace-nowrap pointer-events-none">
+          <Award className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" />
+          <span className="text-xs md:text-sm">Bronze</span>
         </div>
       );
     }
@@ -51,19 +51,18 @@ function CandidateRow({ candidate, rank, maxVotes }: CandidateRowProps) {
             <span className="text-white font-bold text-sm md:text-lg flex-shrink-0">{candidate.votes}</span>
           </div>
 
-          <div className="relative h-5 md:h-6 bg-white/10 rounded-full overflow-hidden">
+          <div className="relative h-5 md:h-6 bg-white/10 rounded-full overflow-hidden flex items-center justify-center">
             <div
               className="absolute inset-y-0 left-0 bg-gradient-to-r from-white to-gray-300 rounded-full transition-all duration-500 ease-out"
               style={{ width: `${barWidth}%` }}
             />
+            {rank <= 3 && (
+              <div className="relative z-10">
+                {getRankBadge()}
+              </div>
+            )}
           </div>
         </div>
-
-        {rank <= 3 && (
-          <div className="flex-shrink-0 ml-2">
-            {getRankBadge()}
-          </div>
-        )}
       </div>
     </div>
   );
