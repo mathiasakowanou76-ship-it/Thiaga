@@ -26,7 +26,7 @@ function App() {
           <img
             src="/WhatsApp Image 2025-11-15 à 15.56.33_05e2a873.jpg"
             alt="Logo"
-            className="h-32 w-32 object-contain mb-8"
+            className="h-40 w-40 object-cover rounded-full border-4 border-white mb-8 shadow-2xl"
           />
 
           <h1 className="text-5xl md:text-6xl font-bold text-white text-center leading-tight">
