@@ -24,9 +24,9 @@ function App() {
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-5xl">
         <div className="flex flex-col items-center mb-12">
           <img
-            src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=200"
+            src="/WhatsApp Image 2025-11-15 à 15.56.33_05e2a873.jpg"
             alt="Logo"
-            className="h-24 w-24 object-cover rounded-full border-4 border-white mb-8 shadow-xl"
+            className="h-32 w-32 object-contain mb-8"
           />
 
           <h1 className="text-5xl md:text-6xl font-bold text-white text-center leading-tight">
