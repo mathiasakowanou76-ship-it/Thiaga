@@ -24,7 +24,7 @@ function App() {
       <div className="relative z-10 container mx-auto px-4 py-12 max-w-5xl">
         <div className="flex flex-col items-center mb-12">
           <img
-            src="/WhatsApp Image 2025-11-15 à 15.56.33_05e2a873.jpg"
+            src={`${import.meta.env.BASE_URL}WhatsApp Image 2025-11-15 à 15.56.33_05e2a873.jpg`}
             alt="Logo"
             className="h-40 w-40 object-cover rounded-full border-4 border-white mb-8 shadow-2xl"
           />
